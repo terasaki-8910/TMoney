@@ -52,7 +52,13 @@ TMoneyは、収支を管理するための簡単な家計簿アプリケーシ�
    cd ../frontend
    npm install
 ```
+
 4. **データベースセットアップ**:
+mysqlにログイン
+```bash
+mysql -u root -p
+```
+
 ```sql
 CREATE DATABASE IF NOT EXISTS tmoney
 CHARACTER SET utf8mb4
