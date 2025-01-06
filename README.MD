@@ -33,10 +33,9 @@ TMoneyは、収支を管理するための簡単な家計簿アプリケーシ�
 
 ### ローカル環境でのセットアップ
 1. **リポジトリをクローンする**:
-   ```bash
+```bash
    git clone https://github.com/terasaki-8910/TMoney.git
    cd TMoney
-  ```
 
 2. **バックエンドセットアップ**:
 ```bash
