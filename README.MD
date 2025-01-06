@@ -50,7 +50,7 @@ TMoneyは、収支を管理するための簡単な家計簿アプリケーシ�
 ```bash
    cd ../frontend
    npm install
-
+```
 4. **データベースセットアップ**:
 ```sql
 CREATE DATABASE IF NOT EXISTS tmoney
@@ -67,19 +67,19 @@ CREATE TABLE IF NOT EXISTS transactions (
     amount DECIMAL(10, 2) NOT NULL,
     type ENUM('income', 'expense') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
+```
 
 5. **アプリの起動**:
 - バックエンド:
 ```bash
-コードをコピーする
 cd backend
 python app.py
+```
 - フロントエンド:
 ```bash
-コードをコピーする
 cd frontend
 npm start
+```
 
 6. **ブラウザでアクセス**:
 - フロントエンド: http://localhost:3000
