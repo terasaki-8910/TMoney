@@ -36,6 +36,7 @@ TMoneyは、収支を管理するための簡単な家計簿アプリケーシ�
    ```bash
    git clone https://github.com/terasaki-8910/TMoney.git
    cd TMoney
+  ```
 
 2. **バックエンドセットアップ**:
 ```bash
@@ -43,6 +44,7 @@ TMoneyは、収支を管理するための簡単な家計簿アプリケーシ�
    python -m venv venv
    source venv/bin/activate  # Windowsの場合: venv\Scripts\activate
    pip install -r requirements.txt
+```
 
 3. **フロントエンドセットアップ**:
 ```bash
