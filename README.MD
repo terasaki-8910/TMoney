@@ -34,7 +34,7 @@ TMoneyは、収支を管理するための簡単な家計簿アプリケーシ�
 ### ローカル環境でのセットアップ
 1. **リポジトリをクローンする**:
    ```bash
-   git clone https://github.com/<your-repo>/TMoney.git
+   git clone https://github.com/terasaki-8910/TMoney.git
    cd TMoney
 
 2. **バックエンドセットアップ**:
@@ -43,5 +43,44 @@ TMoneyは、収支を管理するための簡単な家計簿アプリケーシ�
    python -m venv venv
    source venv/bin/activate  # Windowsの場合: venv\Scripts\activate
    pip install -r requirements.txt
+
+3. **フロントエンドセットアップ**:
+```bash
+   cd ../frontend
+   npm install
+
+4. **データベースセットアップ**:
+```sql
+CREATE DATABASE IF NOT EXISTS tmoney
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE tmoney;
+
+CREATE TABLE IF NOT EXISTS transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE NOT NULL,
+    category VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    description TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    amount DECIMAL(10, 2) NOT NULL,
+    type ENUM('income', 'expense') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+5. **アプリの起動**:
+- バックエンド:
+```bash
+コードをコピーする
+cd backend
+python app.py
+- フロントエンド:
+```bash
+コードをコピーする
+cd frontend
+npm start
+
+6. **ブラウザでアクセス**:
+- フロントエンド: http://localhost:3000
+- バックエンド: http://localhost:5000
 
 
